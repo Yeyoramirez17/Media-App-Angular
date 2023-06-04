@@ -1,0 +1,27 @@
+<div>
+    <form class="example-container" [formGroup]="form" (ngSubmit)="operate()">
+        <div [hidden]="true">
+            <mat-form-field class="example-full-with">
+                <input matInput placeholder="ID" required formControlName="idSpecialty">
+            </mat-form-field>
+        </div>
+    
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Name Specialty" minlength="3" formControlName="nameSpecialty">
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Description Specialty" minlength="3" formControlName="descriptionSpecialty">
+        </mat-form-field>
+    
+        <button mat-raised-button color="primary" type="submit">
+            <mat-icon>done</mat-icon>
+            <span>Done</span>
+        </button>
+    
+        <button mat-raised-button color="accent" type="button" routerLink="/pages/specialty">
+            <mat-icon>cancel</mat-icon>
+            <span>Cancel</span>
+        </button>
+    </form>
+</div>
